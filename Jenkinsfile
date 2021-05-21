@@ -11,7 +11,7 @@ stage('build')
 {
 sh "${mavenHome}/bin/mvn clean package"
 }
-  
+ /* 
 stage('ExecutiveSonarQubeReport')
 {
 sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -20,7 +20,7 @@ stage('UploadArtifactsintoNexus')
 {
 sh "${mavenHome}/bin/mvn deploy"
 }
- /*
+ 
 stage('DeploymentAppintoTomcatServer')
 {
 sshagent(['a4c246d1-7618-4683-afa1-33ec94f16a8e']) {
